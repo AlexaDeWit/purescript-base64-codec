@@ -1,0 +1,17 @@
+{
+  "name": "purescript-base64-codec",
+  "version": "1.0.0",
+  "description": "Utils for encoding and decoding base64 encoded binary content",
+  "repository": "https://github.com/AlexaDeWit/purescript-base64-codec",
+  "author": "Alexandra DeWit",
+  "license": "MIT",
+  "scripts": {
+    "build": "pulp build",
+    "test": "pulp build && pulp test"
+  },
+  "devDependencies": {
+    "pulp": "^12.3.0",
+    "purescript": "^0.12.0",
+    "purescript-psa": "^0.6.0"
+  }
+}

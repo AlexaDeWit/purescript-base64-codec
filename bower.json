@@ -1,0 +1,27 @@
+{
+  "name": "purescript-base64-codec",
+  "description": "Utils for encoding and decoding base64 encoded binary content",
+  "authors": [
+    "Alexandra DeWit"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "purescript-prelude": "^4.0.0",
+    "purescript-spec": "^3.0.0",
+    "purescript-arraybuffer-types": "^2.0.0",
+    "purescript-arraybuffer": "^7.0.0",
+    "purescript-uint": "^4.0.0"
+  },
+ "devDependencies": {
+    "purescript-debug": "^4.0.0",
+    "purescript-quickcheck": "^5.0.0"
+  }
+}
