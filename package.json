@@ -4,7 +4,7 @@
   "description": "Utils for encoding and decoding base64 encoded binary content",
   "repository": "https://github.com/AlexaDeWit/purescript-base64-codec",
   "author": "Alexandra DeWit",
-  "license": "MIT",
+  "license": "Unlicense",
   "scripts": {
     "build": "pulp build",
     "test": "pulp build && pulp test"
