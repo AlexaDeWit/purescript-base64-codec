@@ -17,7 +17,7 @@ exports.encodeBase64Impl = function(buffer) {
       return a.concat([String.fromCharCode(n)]);
     };
     const arr = new Array();
-    const wrapped = new Uint16Array(buffer);
+    const wrapped = new Uint8Array(buffer);
     return btoa(wrapped.reduce(reducer, arr).join(''));
   }
 };
