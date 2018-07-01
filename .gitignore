@@ -3,3 +3,4 @@ bower_components/
 yarn-error.log
 output/
 .pulp-cache/
+.generated.docs/
