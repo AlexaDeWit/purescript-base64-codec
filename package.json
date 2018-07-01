@@ -7,7 +7,8 @@
   "license": "Unlicense",
   "scripts": {
     "build": "pulp build",
-    "test": "pulp build && pulp test"
+    "test": "pulp build && pulp test",
+    "docs": "pulp docs && cp generated-docs/Data/Base64.md README.md"
   },
   "devDependencies": {
     "pulp": "^12.3.0",
