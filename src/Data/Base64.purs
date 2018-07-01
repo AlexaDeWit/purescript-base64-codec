@@ -12,7 +12,7 @@ import Data.Function.Uncurried (Fn3, runFn3)
 -- | A boxed Base64 type to prevent accidental misuse
 newtype Base64 = Base64 String
 
--- | Unbox a base64 and use the innter string
+-- | Unbox a base64 and use the inner string
 runBase64 :: Base64 -> String
 runBase64 (Base64 s) = s
 
