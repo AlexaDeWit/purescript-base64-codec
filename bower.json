@@ -20,7 +20,7 @@
   "dependencies": {
     "purescript-prelude": "^4.0.0",
     "purescript-arraybuffer-types": "^2.0.0",
-    "purescript-arraybuffer": "^7.0.0",
+    "purescript-arraybuffer": "^7.0.0"
   },
  "devDependencies": {
     "purescript-debug": "^4.0.0",
