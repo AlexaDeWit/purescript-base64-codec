@@ -1,6 +1,7 @@
 module Data.Base64
        ( encodeBase64
        , decodeBase64
+       , runBase64
        , Base64(..)
        ) where
 
