@@ -36,7 +36,7 @@ exports.decodeBase64Impl = function(just, nothing, str) {
       for(i = 0; i < ns.length; i ++) {
         ns[i] = byteString.charCodeAt(i);
       }
-      return just(ns);
+      return just(new ArrayBuffer(ns));
     }
   } catch (e) {
     return nothing;
