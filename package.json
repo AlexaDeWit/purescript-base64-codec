@@ -1,6 +1,6 @@
 {
   "name": "purescript-base64-codec",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "description": "Utils for encoding and decoding base64 encoded binary content",
   "repository": "https://github.com/AlexaDeWit/purescript-base64-codec",
   "author": "Alexandra DeWit",

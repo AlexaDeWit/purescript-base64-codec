@@ -14,15 +14,16 @@
     "tests"
   ],
   "repository": {
-      "type": "git",
-      "url": "https://github.com/AlexaDeWit/purescript-base64-codec.git"
+    "type": "git",
+    "url": "https://github.com/AlexaDeWit/purescript-base64-codec.git"
   },
   "dependencies": {
     "purescript-prelude": "^4.0.0",
-    "purescript-arraybuffer-types": "^2.0.0"
+    "purescript-arraybuffer-types": "^2.0.0",
+    "purescript-newtype": "^3.0.0"
   },
- "devDependencies": {
-    "purescript-arraybuffer": "^8.0.0",
+  "devDependencies": {
+    "purescript-arraybuffer": "^8.0.2",
     "purescript-debug": "^4.0.0",
     "purescript-quickcheck": "^5.0.0",
     "purescript-spec": "^3.0.0"

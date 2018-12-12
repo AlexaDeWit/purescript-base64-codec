@@ -1,7 +1,6 @@
 module Data.Base64
        ( encodeBase64
        , decodeBase64
-       , runBase64
        , Base64(..)
        ) where
 
@@ -9,15 +8,13 @@ import Prelude ((<<<), class Show, class Eq, (<>))
 import Data.Maybe (Maybe(..))
 import Data.ArrayBuffer.Types(ArrayBuffer)
 import Data.Function.Uncurried (Fn3, runFn3)
+import Data.Newtype (class Newtype)
 
 -- | A boxed Base64 type to prevent accidental misuse
 newtype Base64 = Base64 String
 
--- | Unbox a base64 and use the inner string
-runBase64 :: Base64 -> String
-runBase64 (Base64 s) = s
-
 derive instance eqBase64 :: Eq Base64
+derive instance newtypeBase64 :: Newtype Base64 _
 
 -- | Show instance is for textual representations, not data representation
 instance showBase64 :: Show Base64 where
