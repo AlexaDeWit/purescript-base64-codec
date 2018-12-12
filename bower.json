@@ -5,7 +5,6 @@
     "Alexandra DeWit"
   ],
   "license": "Unlicense",
-  "homepage": "",
   "ignore": [
     "**/.*",
     "node_modules",
