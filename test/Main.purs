@@ -3,7 +3,6 @@ module Test.Main where
 import Prelude
 import Effect (Effect)
 import Test.QuickCheck (quickCheck, (<?>))
-import Data.Maybe (Maybe(..))
 import Test.QuickCheck.Arbitrary (class Arbitrary, arbitrary)
 import Data.ArrayBuffer.Types as AT
 import Data.ArrayBuffer.ArrayBuffer as AB
@@ -26,7 +25,7 @@ main :: Effect Unit
 main = do
   quickCheck
     \(Base64 b) ->
-      Just b == (map B64.encodeBase64 $ B64.decodeBase64 b)
+      b == (B64.encodeBase64 $ B64.decodeBase64 b)
       <?> "Isormorphic base64 round trip failed"
 
 
