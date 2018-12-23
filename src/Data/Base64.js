@@ -7,13 +7,13 @@ function validateBase64(s) {
   }
 }
 
-exports.encodeBase64Impl = function(buffer) {
+exports.encodeBase64Impl = function (buffer) {
   if (typeof btoa === 'undefined') {
     // Node
     return Buffer.from(buffer).toString('base64');
   } else {
     // Browser
-    const reducer = function(a, n) {
+    const reducer = function (a, n) {
       return a.concat([String.fromCharCode(n)]);
     };
     const arr = new Array();
@@ -22,7 +22,7 @@ exports.encodeBase64Impl = function(buffer) {
   }
 };
 
-exports.decodeBase64Impl = function(just, nothing, str) {
+exports.decodeBase64Impl = function (just, nothing, str) {
   try {
     validateBase64(str);
     if (typeof atob === 'undefined') {
@@ -33,7 +33,7 @@ exports.decodeBase64Impl = function(just, nothing, str) {
       var i = 0;
       const byteString = atob(str);
       var ns = new Uint8Array(byteString.length);
-      for(i = 0; i < ns.length; i ++) {
+      for (i = 0; i < ns.length; i++) {
         ns[i] = byteString.charCodeAt(i);
       }
       return just(ns.buffer);
@@ -42,3 +42,12 @@ exports.decodeBase64Impl = function(just, nothing, str) {
     return nothing;
   }
 };
+
+exports.fromStringImpl = function (just, nothing, str) {
+  try {
+    validateBase64(str);
+    return just(str);
+  } catch (e) {
+    return nothing;
+  }
+}
