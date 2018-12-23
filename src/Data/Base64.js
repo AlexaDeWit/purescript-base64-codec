@@ -42,3 +42,12 @@ exports.decodeBase64Impl = function (just, nothing, str) {
     return nothing;
   }
 };
+
+exports.fromStringImpl = function (just, nothing, str) {
+  try {
+    validateBase64(str);
+    return just(str);
+  } catch (e) {
+    return nothing;
+  }
+}

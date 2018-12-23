@@ -3,6 +3,7 @@ module Data.Base64
        , decodeBase64
        , Base64
        , runBase64
+       , fromString
        ) where
 
 import Data.ArrayBuffer.Types (ArrayBuffer)
@@ -34,5 +35,11 @@ decodeBase64 :: Base64 ->  ArrayBuffer
 -- The function with this type signature is total. The underlying ffi function must however be defined in terms of Maybe
 decodeBase64 (Base64 content) = unsafePartial $ fromJust $ runFn3 decodeBase64Impl Just Nothing content
 
+-- |
 runBase64 :: Base64 -> String
 runBase64 (Base64 s) = s
+
+foreign import fromStringImpl :: Fn3 (Base64 -> Maybe Base64) (Maybe Base64) String (Maybe Base64)
+
+fromString :: String -> Maybe Base64
+fromString = runFn3 fromStringImpl Just Nothing
